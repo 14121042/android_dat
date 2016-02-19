@@ -1,3 +1,31 @@
+##Android 4.3以上##
+**Dat轉Img(Ext4)**
+
+
+sudo sdat2img system.transfer.list system.new.dat system.img
+
+
+**掛載System**
+
+
+sudo mount -t ext4 -o loop system.img system
+
+
+**將掛載的System寫成Img(普通)**
+
+
+sudo make_ext4fs -T 0 -S file_contexts -l 1306003000 -a system system_new.img system
+
+(1306001408B爲system.img大小)
+
+
+**將Img(Ext4)轉成Dat**
+
+
+sudo rimg2sdat system_ext4.img
+
+
+##Android 4.3或以下##
 **Dat轉Img(Ext4)**
 
 
@@ -39,3 +67,6 @@ sudo rimg2sdat system_ext4.img
 **simg2img**
 
 **rimg2sdat**
+
+##其他指令##
+resize2fs system.img 318848

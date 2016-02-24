@@ -1,8 +1,8 @@
-##Android 4.3以上##
+##Android 4.4或以上##
 **Dat轉Img(Ext4)**
 
 
-sudo sdat2img system.transfer.list system.new.dat system.img
+sudo sdat2img.py system.transfer.list system.new.dat system.img
 
 
 **掛載System**
@@ -22,16 +22,10 @@ sudo make_ext4fs -T 0 -S file_contexts -l 1306003000 -a system system_new.img sy
 **將Img(Ext4)轉成Dat**
 
 
-sudo rimg2sdat system_ext4.img
+sudo rimg2sdat system_new.img
 
 
 ##Android 4.3或以下##
-**Dat轉Img(Ext4)**
-
-
-sudo sdat2img system.transfer.list system.new.dat system.img
-
-
 **掛載System**
 
 
@@ -60,7 +54,7 @@ sudo rimg2sdat system_ext4.img
 
 ##需要使用的程式##
 
-**sdat2img**
+**sdat2img.py**
 
 **make_ext4fs**
 
